@@ -27,9 +27,9 @@ const app = express();
 app.use(express.json());
 app.use(cors()); // to allow the frontend communication
 
-// app.get('/',(req, res)=>{
-// 	res.json(database.users)
-// })
+app.get('/',(req, res)=>{
+	res.json('it is working')
+})
 
 // signin:
 app.post('/signin', signin.handleSignin(db, bcrypt)) //another way of dependency injection (take a look signin controller)
